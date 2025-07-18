@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.younes.monapp"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +38,19 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "bc46c7aa-a27d-493e-8296-5ca1fc4bf538"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/bc46c7aa-a27d-493e-8296-5ca1fc4bf538"
+    },
+    "owner": "younesss_bf"
   }
 }
