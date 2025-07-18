@@ -1,8 +1,15 @@
-import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-native';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useLocalSearchParams } from 'expo-router';
-import { API_BASE_URL } from '../../utils/config'; // Assurez-vous que le chemin est correct
+import axios from "axios";
+import { useLocalSearchParams } from "expo-router";
+import { useEffect, useState } from "react";
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import { API_BASE_URL } from "../../utils/config"; // Assurez-vous que le chemin est correct
+import PushNotifications from "../notifications/index"; // Assurez-vous que le chemin est correct
 
 interface WaterTankI {
   _id: string;
@@ -26,13 +33,12 @@ interface FishedDetails {
   fish_weight: number;
 }
 
-
 export default function Dashboard() {
   const { userId } = useLocalSearchParams<{ userId: string }>();
 
   const [tanks, setTanks] = useState<WaterTankI[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (!userId) {
@@ -43,8 +49,10 @@ export default function Dashboard() {
 
     const fetchTanks = async () => {
       try {
-        const res = await axios.get<WaterTankI[]>(`${API_BASE_URL}/waterTanks/user/${userId}`);
-        console.log('Tanks:', res.data);
+        const res = await axios.get<WaterTankI[]>(
+          `${API_BASE_URL}/waterTanks/user/${userId}`
+        );
+        console.log("Tanks:", res.data);
 
         setTanks(res.data.data);
       } catch (err) {
@@ -69,41 +77,48 @@ export default function Dashboard() {
   if (error) {
     return (
       <View style={styles.center}>
-        <Text style={{ color: 'red' }}>{error}</Text>
+        <Text style={{ color: "red" }}>{error}</Text>
       </View>
     );
   }
 
   return (
-    <FlatList
-      data={tanks}
-      keyExtractor={(item) => item._id}
-      renderItem={({ item }) => (
-        <View style={styles.card}>
-          <Text style={styles.title}>{item.name}</Text>
-          <Text>Status: {item.isActive ? '✅ Actif' : '❌ Inactif'}</Text>
+    <View>
+      <PushNotifications />
+      <FlatList
+        data={tanks}
+        keyExtractor={(item) => item._id}
+        renderItem={({ item }) => (
+          <View style={styles.card}>
+            <Text style={styles.title}>{item.name}</Text>
+            <Text>Status: {item.isActive ? "✅ Actif" : "❌ Inactif"}</Text>
 
-          <Text style={styles.section}>📐 Dimensions</Text>
-          <Text>Longueur: {item.details.length} m</Text>
-          <Text>Largeur: {item.details.width} m</Text>
-          <Text>Volume: {item.details.volume} m³</Text>
+            <Text style={styles.section}>📐 Dimensions</Text>
+            <Text>Longueur: {item.details.length} m</Text>
+            <Text>Largeur: {item.details.width} m</Text>
+            <Text>Volume: {item.details.volume} m³</Text>
 
-          <Text style={styles.section}>👤 Responsable</Text>
-          <Text>{item.responsible}</Text>
+            <Text style={styles.section}>👤 Responsable</Text>
+            <Text>{item.responsible}</Text>
 
-          {item.fishDetails && (
-            <>
-              <Text style={styles.section}>🐟 Détails des poissons</Text>
-              <Text>Poissons totaux: {item.fishDetails.total_fish_count}</Text>
-              <Text>Poissons malades: {item.fishDetails.total_fish_sick}</Text>
-              <Text>Taille moyenne: {item.fishDetails.fish_lenght} cm</Text>
-              <Text>Poids moyen: {item.fishDetails.fish_weight} g</Text>
-            </>
-          )}
-        </View>
-      )}
-      contentContainerStyle={styles.container}
-    />
+            {item.fishDetails && (
+              <>
+                <Text style={styles.section}>🐟 Détails des poissons</Text>
+                <Text>
+                  Poissons totaux: {item.fishDetails.total_fish_count}
+                </Text>
+                <Text>
+                  Poissons malades: {item.fishDetails.total_fish_sick}
+                </Text>
+                <Text>Taille moyenne: {item.fishDetails.fish_lenght} cm</Text>
+                <Text>Poids moyen: {item.fishDetails.fish_weight} g</Text>
+              </>
+            )}
+          </View>
+        )}
+        contentContainerStyle={styles.container}
+      />
+    </View>
   );
 }
 
@@ -113,23 +128,23 @@ const styles = StyleSheet.create({
   },
   center: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     padding: 16,
     marginBottom: 16,
     borderRadius: 12,
     elevation: 2,
   },
   title: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: 18,
     marginBottom: 8,
   },
   section: {
     marginTop: 10,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });
