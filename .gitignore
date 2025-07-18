@@ -3,7 +3,8 @@
 # dependencies
 node_modules/
 
-google-services.json
+
+utils/config.ts
 # Expo
 .expo/
 dist/
