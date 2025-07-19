@@ -1,11 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import NotificationPage from '@/components/screens/NotificationPage'
 
 const Notification = () => {
   return (
-    <View>
-      <Text>N</Text>
-    </View>
+    <NotificationPage/>
   )
 }
 

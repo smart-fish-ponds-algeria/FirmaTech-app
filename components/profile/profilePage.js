@@ -156,33 +156,7 @@ const ProfilePage = () => {
     </View>
   )
 
-  const SubscriptionCard = () => (
-    <View style={styles.subscriptionCard}>
-      <View style={styles.subscriptionHeader}>
-        <Text style={styles.subscriptionTitle}>💎 Subscription</Text>
-        <View style={styles.subscriptionBadge}>
-          <Text style={styles.subscriptionBadgeText}>{farmerProfile.subscription.plan}</Text>
-        </View>
-      </View>
-      <Text style={styles.subscriptionStatus}>
-        Status: <Text style={styles.activeStatus}>{farmerProfile.subscription.status}</Text>
-      </Text>
-      <Text style={styles.subscriptionExpiry}>
-        Expires: {new Date(farmerProfile.subscription.expiryDate).toLocaleDateString()}
-      </Text>
-      <View style={styles.featuresContainer}>
-        {farmerProfile.subscription.features.map((feature, index) => (
-          <View key={index} style={styles.featureItem}>
-            <Text style={styles.featureIcon}>✓</Text>
-            <Text style={styles.featureText}>{feature}</Text>
-          </View>
-        ))}
-      </View>
-      <TouchableOpacity style={styles.upgradeButton}>
-        <Text style={styles.upgradeButtonText}>Manage Subscription</Text>
-      </TouchableOpacity>
-    </View>
-  )
+  
 
   const SettingsSection = ({ title, children }) => (
     <View style={styles.settingsSection}>
@@ -227,14 +201,10 @@ const ProfilePage = () => {
       <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
 
       {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity style={styles.backButton}>
-          <Text style={styles.backIcon}>←</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Profile</Text>
-        <TouchableOpacity style={styles.settingsButton}>
-          <Text style={styles.settingsButtonIcon}>⚙️</Text>
-        </TouchableOpacity>
+      <View className="text-center w-full flex justify-center items-center " style={styles.header}>
+
+        <Text className="text-center flex justify-center items-center" style={styles.headerTitle}>Profile</Text>
+     
       </View>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
@@ -380,7 +350,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
     paddingHorizontal: 20,
     paddingVertical: 16,
     borderBottomWidth: 1,
