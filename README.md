@@ -1,4 +1,4 @@
-  <img src="assets/images/Group 1171274913.png" width="400" />
+  <img src="assets/images/Group 1171274914.png" width="400" />
   
 # 🐠 FirmaTech — Smart Aquaculture Management App
 
