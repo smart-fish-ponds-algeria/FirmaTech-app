@@ -1,50 +1,105 @@
-# Welcome to your Expo app 👋
+# 📱 Expo React Native App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile application built with **Expo**, **React Native**, and **TypeScript**.  
+Includes user authentication, reusable UI components, and Firebase push notification support.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Features
 
-   ```bash
-   npm install
-   ```
+- 🔐 Authentication with login screen
+- 💅 Custom UI components and improved UX
+- ⚛️ React Native with TypeScript
+- 🔔 Push Notifications via Firebase
+- 🌐 EAS Build support
+- 🧪 ESLint for consistent code quality
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 📁 Project Structure
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+.
+├── app/                  # App entry and screens
+├── assets/               # Images, fonts, etc.
+├── services/             # API and auth services
+├── utils/                # Utility functions
+├── .vscode/              # Editor settings
+├── app.json              # Expo app configuration
+├── eas.json              # EAS build configuration
+├── tsconfig.json         # TypeScript configuration
+├── package.json          # Project metadata and scripts
+└── README.md             # Project documentation
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🧑‍💻 Getting Started
 
-To learn more about developing your project with Expo, look at the following resources:
+### 1. Clone the repo
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
 
-## Join the community
+### 2. Install dependencies
 
-Join our community of developers creating universal apps.
+```bash
+npm install
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 3. Run the project
+
+```bash
+npx expo start
+```
+
+> Use Expo Go to scan the QR code and launch the app.
+
+---
+
+## 🔐 Authentication
+
+Authentication service located in `services/`.  
+Handles login via email/password (extendable to OAuth or Firebase).
+
+---
+
+## 🔔 Notifications
+
+Uses Firebase Cloud Messaging (FCM).  
+Make sure to configure the `expo-notification-*` JSON key in `app.json`.
+
+---
+
+## 🧪 Scripts
+
+```bash
+npm run lint         # Lint code with ESLint
+npm run start        # Start expo server
+npm run build        # Build for production
+```
+
+---
+
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/58a0dc14-e76f-4bdc-94a6-fef7716c5583" width="300" />
+  <img src="https://github.com/user-attachments/assets/65b03a3b-9761-45aa-862b-4f401ccd4fff" width="300" />
+  <img src="https://github.com/user-attachments/assets/a155c05b-29db-4fbf-847c-ab9a850abe81" width="300" />
+</div>
+
+
+## 🛠 Built With
+
+- [Expo](https://expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Firebase Notifications](https://firebase.google.com/docs/cloud-messaging)
+
+---
+
+## 📄 License
+
+MIT © 2025 Your Name
