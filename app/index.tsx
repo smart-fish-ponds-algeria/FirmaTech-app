@@ -31,7 +31,7 @@ export default function LoginScreen() {
         style={{ width: 250, height: 50, marginBottom: 80 }}
       />
       <Text className="text-[40px] font-extrabold text-[#0052FF] leading-[48px] text-left w-full max-w-xs">
-        Let’s{'\n'}Get Started!
+        Let’s{"\n"}Get Started!
       </Text>
 
       <View className="w-full max-w-xs mt-10">
