@@ -1,7 +1,7 @@
 import { Link, router } from "expo-router";
 import React, { useState } from "react";
 import { View, Text, TextInput, Image, TouchableOpacity, ActivityIndicator } from "react-native";
-import { login } from "../services/authService"; // adjust path if needed
+import { login } from "../services/authService";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
@@ -12,18 +12,12 @@ export default function LoginScreen() {
   const handleLogin = async () => {
     setLoading(true);
     setError("");
-
     try {
       const data = await login(email, password);
-      console.log("Login successful:", data);
       const userId = data?.data?._id;
-      if (!userId) {
-        setError("Aucun ID d'utilisateur trouvé dans la réponse.");
-        return;
-      }
+      if (!userId) return setError("User ID not found.");
       router.replace(`/dashboard?userId=${userId}`);
     } catch (err) {
-      console.log("Login error:", err);
       setError(err?.response?.data?.message || "Login failed");
     } finally {
       setLoading(false);
@@ -31,14 +25,12 @@ export default function LoginScreen() {
   };
 
   return (
-    <View className="flex-1 bg-white items-center pt-20 ">
-  <Image
-  source={require('../assets/images/group1171274913 (2).jpg')}
-  className=" mb-20"
-/>
-
-
-      <Text className="text-[48px] font-extrabold text-[#0052FF] leading-[56px] w-full max-w-xs">
+    <View className="flex-1 bg-white items-center pt-20 px-6">
+      <Image
+        source={require('../assets/images/group1171274913 (2).jpg')}
+        style={{ width: 64, height: 64, marginBottom: 80 }}
+      />
+      <Text className="text-[40px] font-extrabold text-[#0052FF] leading-[48px] text-left w-full max-w-xs">
         Let’s{'\n'}Get Started!
       </Text>
 
@@ -63,16 +55,13 @@ export default function LoginScreen() {
           onChangeText={setPassword}
         />
 
-        {error ? (
-          <Text className="text-red-500 mb-4 text-sm">{error}</Text>
-        ) : null}
+        {error ? <Text className="text-red-500 mb-4 text-sm">{error}</Text> : null}
 
         <TouchableOpacity className="mb-6 items-end">
-          <Text className="text-black underline text-base">Forgot your Password?</Text>
+          <Text className="text-black underline text-base">Forgot your password?</Text>
         </TouchableOpacity>
-        <Link href="(tabs)" className="text-blue-500 underline">
-      Go to Home
-    </Link>        <TouchableOpacity
+
+        <TouchableOpacity
           onPress={handleLogin}
           disabled={loading}
           className={`w-full bg-[#0052FF] py-3 rounded-md items-center ${loading ? 'opacity-60' : ''}`}
@@ -83,7 +72,12 @@ export default function LoginScreen() {
             <Text className="text-white font-bold text-lg">LOG IN</Text>
           )}
         </TouchableOpacity>
-       
+
+        <TouchableOpacity className="mt-4 items-center">
+          <Link href="(tabs)">
+            <Text className="text-[#0052FF] underline font-medium">Go to Home</Text>
+          </Link>
+        </TouchableOpacity>
       </View>
     </View>
   );

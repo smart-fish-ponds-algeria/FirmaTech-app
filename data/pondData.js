@@ -1,0 +1,62 @@
+export const pondData = {
+    id: 'P001',
+    name: 'Pond Alpha',
+    location: 'North Section',
+    farmer: 'Ahmed Benali',
+    status: 'warning',
+    lastUpdated: '3 minutes ago',
+    parameters: {
+        temperature: { title: 'Temperature', value: 28, unit: '°C', status: 'Normal', threshold: 30, icon: '🌡️' },
+        ph: { title: 'pH Level', value: 7.5, unit: '', status: 'Normal', threshold: 8, icon: '⚗️' },
+        oxygen: { title: 'Dissolved O₂', value: 5.2, unit: 'mg/L', status: 'Normal', threshold: 4, icon: '💧' },
+        fishCount: { title: 'Fish Count', value: 120, unit: '', status: 'Normal', threshold: 100, icon: '🐟' },
+      },
+      
+    systemStatus: {
+      sensorNetwork: 'online',
+      aiCamera: 'active',
+      dataSync: '3 min delay',
+      alertSystem: 'operational',
+    },
+    alerts: [
+      {
+        id: 'A001',
+        type: 'High Temperature',
+        severity: 'critical',
+        time: '2 minutes ago',
+        parameter: 'Temperature: 27.0°C',
+        description: 'Temperature exceeded 26°C threshold',
+        status: 'active',
+      },
+      {
+        id: 'A002',
+        type: 'Low Oxygen',
+        severity: 'warning',
+        time: '15 minutes ago',
+        parameter: 'O₂: 7.1 mg/L',
+        description: 'Oxygen levels below 7.5 mg/L threshold',
+        status: 'active',
+      },
+    ],
+    fishHealth: {
+      totalCount: 1247,
+      biomass: 425,
+      averageWeight: 341,
+      growthRate: 2.3,
+      healthyPercentage: 98.2,
+      abnormalBehavior: 1.5,
+      diseaseDetected: 0.3,
+      activityScore: 78,
+    },
+    feeding: {
+      todayAmount: 14,
+      weeklyAverage: 14.6,
+      efficiency: 89,
+      lastFeed: '6 hours ago',
+      nextFeed: '2 hours',
+      suggestions: [
+        'Reduce feeding by 15% due to low fish activity',
+        'Consider feeding earlier when water temperature is cooler',
+      ],
+    },
+  };
