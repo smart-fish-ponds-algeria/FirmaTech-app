@@ -1,17 +1,28 @@
-# 📱 Expo React Native App
+# 🐠 FirmaTech — Smart Aquaculture Management App
 
-A mobile application built with **Expo**, **React Native**, and **TypeScript**.  
-Includes user authentication, reusable UI components, and Firebase push notification support.
+### 🚀 Built at AquaColture Hackathon 2025
+
+FirmaTech is a mobile application designed to empower aquaculture farmers with real-time monitoring, AI-driven insights, and smart feeding management — all from one intuitive interface. This project was built in under 48 hours during the **AquaColture Hackathon**, as part of a mission to digitize and improve modern fish farming.
 
 ---
 
-## 🚀 Features
+## 🎯 What We Built
 
-- 🔐 Authentication with login screen
-- 💅 Custom UI components and improved UX
-- ⚛️ React Native with TypeScript
-- 🔔 Push Notifications via Firebase
-- 🧪 ESLint for consistent code quality
+✅ **Real-Time Monitoring** — Track pond temperature, oxygen levels, pH, fish count, and other vital metrics.
+✅ **AI Fish Health Tracking** — Monitor growth rates, fish activity, and detect abnormal behavior using AI insights.
+✅ **Smart Feeding System** — Optimize feeding schedules with efficiency charts, history tracking, and AI suggestions.
+✅ **Alert System** — Get instant notifications on critical conditions like low oxygen or abnormal temperatures.
+✅ **Multi-Pond Management** — Easily switch between ponds and access detailed dashboards for each.
+
+---
+
+## 💻 Technologies Used
+
+* React Native (Expo)
+* NativeWind (Tailwind CSS for React Native)
+* React Native Chart Kit
+* React Native Picker
+* Expo Router
 
 ---
 
