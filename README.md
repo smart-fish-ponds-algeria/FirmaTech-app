@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+Here's a revised version reflecting your hackathon details:
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+---
 
-## Get started
+# 🐠 FirmaTech — Smart Aquaculture Management App
 
-1. Install dependencies
+### 🚀 Built at Junction Hackathon (Club CELEC) — 3-Day Challenge
 
-   ```bash
-   npm install
-   ```
+FirmaTech is a mobile application designed to empower aquaculture farmers with real-time monitoring, AI-driven insights, and smart feeding management — all from one intuitive interface. This project was built in just **3 days** during the **Junction Hackathon**, organized by **Club CELEC**, with the mission to modernize and digitize aquaculture operations.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🎯 What We Built
 
-In the output, you'll find options to open the app in a
+✅ **Real-Time Monitoring** — Track pond temperature, oxygen levels, pH, fish count, and other vital metrics.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+✅ **AI Fish Health Tracking** — Monitor growth rates, fish activity, and detect abnormal behavior using AI insights.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+✅ **Smart Feeding System** — Optimize feeding schedules with efficiency charts, history tracking, and AI suggestions.
 
-## Get a fresh project
+✅ **Alert System** — Get instant notifications on critical conditions like low oxygen or abnormal temperatures.
 
-When you're ready, run:
+✅ **Multi-Pond Management** — Easily switch between ponds and access detailed dashboards for each.
+
+---
+
+## 💻 Technologies Used
+
+* React Native (Expo)
+* NativeWind (Tailwind CSS for React Native)
+* React Native Chart Kit
+* React Native Picker
+* Expo Router
+
+---
+
+## 📱 Demo Screenshots
+
+| 📊 Dashboard                          | 🐟 AI Fish Health                     | 🍽️ Feeding Management              |
+| ------------------------------------- | ------------------------------------- | ----------------------------------- |
+| ![Dashboard](link-to-your-screenshot) | ![AI Health](link-to-your-screenshot) | ![Feeding](link-to-your-screenshot) |
+
+---
+
+## 👥 Team Members
+
+Here's the updated README team section including everyone you mentioned:
+
+---
+
+## 👥 Team Members
+
+* **Benabdallah Souhaib** — Mobile Development & UI/UX
+* **Marya** — UI/UX Design
+* **Younes** — Mobile Development
+* **Riyad Allali** — Backend/API Integration
+* **Ounis Samir Akram** — AI/Research/Testing
+
+
+Built together at **Junction Hackathon** with **Club CELEC** to promote smart and efficient aquaculture management solutions.
+
+---
+
+## 📌 How to Run It
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-team/firmatech-app.git
+cd firmatech-app
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Then scan the QR code with the **Expo Go** app on your phone.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🌍 Why It Matters
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+With global food demands increasing and environmental factors affecting aquaculture, **FirmaTech** provides farmers with an easy-to-use smart tool to reduce risks, optimize feed usage, and boost overall farm efficiency.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🎁 Acknowledgements
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Special thanks to **Junction Hackathon**, **Club CELEC**, and all mentors and organizers who made this event an inspiring experience.
+
+---
+
+Let me know if you want to tweak the tone or add more team details.
