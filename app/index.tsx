@@ -1,105 +1,84 @@
-import { router } from "expo-router";
+import { Link, router } from "expo-router";
 import React, { useState } from "react";
-import {
-  KeyboardAvoidingView,
-  Platform,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
-import { login } from "../services/authService"; // adapte le chemin si besoin
+import { View, Text, TextInput, Image, TouchableOpacity, ActivityIndicator } from "react-native";
+import { login } from "../services/authService";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
+    setLoading(true);
+    setError("");
     try {
       const data = await login(email, password);
-      const userId = data.data._id;
-      if (!userId) {
-        setError("Aucun ID d'utilisateur trouvé dans la réponse.");
-        return;
-      }
-
+      const userId = data?.data?._id;
+      if (!userId) return setError("User ID not found.");
       router.replace(`/dashboard?userId=${userId}`);
-    } catch (err: any) {
-      setError(err?.response?.data?.message || "Échec de la connexion");
+    } catch (err) {
+      setError(err?.response?.data?.message || "Login failed");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <KeyboardAvoidingView
-      style={styles.container}
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
-    >
-      <Text style={styles.title}>Connexion</Text>
-
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        keyboardType="email-address"
-        autoCapitalize="none"
+    <View className="flex-1 bg-white items-center pt-20 px-6">
+      <Image
+        source={require('../assets/images/group1171274913 (2).jpg')}
+        style={{ width: 250, height: 50, marginBottom: 80 }}
       />
+      <Text className="text-[40px] font-extrabold text-[#0052FF] leading-[48px] text-left w-full max-w-xs">
+        Let’s{"\n"}Get Started!
+      </Text>
 
-      <TextInput
-        style={styles.input}
-        placeholder="Mot de passe"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
-      />
+      <View className="w-full max-w-xs mt-10">
+        <Text className="text-gray-400 text-sm mb-1">Email</Text>
+        <TextInput
+          className="w-full border-b border-gray-300 text-black text-base pb-1 mb-6"
+          placeholder="Enter your email"
+          placeholderTextColor="#999"
+          keyboardType="email-address"
+          value={email}
+          onChangeText={setEmail}
+        />
 
-      {error ? <Text style={styles.error}>{error}</Text> : null}
+        <Text className="text-gray-400 text-sm mb-1">Password</Text>
+        <TextInput
+          className="w-full border-b border-gray-300 text-black text-base pb-1 mb-4"
+          placeholder="Enter your password"
+          placeholderTextColor="#999"
+          secureTextEntry
+          value={password}
+          onChangeText={setPassword}
+        />
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Se connecter</Text>
-      </TouchableOpacity>
-    </KeyboardAvoidingView>
+        {error ? <Text className="text-red-500 mb-4 text-sm">{error}</Text> : null}
+
+        <TouchableOpacity className="mb-6 items-end">
+          <Text className="text-black underline text-base">Forgot your password?</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={handleLogin}
+          disabled={loading}
+          className={`w-full bg-[#0052FF] py-3 rounded-md items-center ${loading ? 'opacity-60' : ''}`}
+        >
+          {loading ? (
+            <ActivityIndicator color="#fff" />
+          ) : (
+            <Text className="text-white font-bold text-lg">LOG IN</Text>
+          )}
+        </TouchableOpacity>
+
+        <TouchableOpacity className="mt-4 items-center">
+          <Link href="(tabs)">
+            <Text className="text-[#0052FF] underline font-medium">Go to Home</Text>
+          </Link>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    paddingHorizontal: 30,
-    backgroundColor: "#f8f9fb",
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    color: "#333",
-    textAlign: "center",
-    marginBottom: 40,
-  },
-  input: {
-    height: 50,
-    backgroundColor: "#fff",
-    borderRadius: 12,
-    paddingHorizontal: 15,
-    marginBottom: 20,
-    borderColor: "#ddd",
-    borderWidth: 1,
-  },
-  button: {
-    backgroundColor: "#2e86de",
-    paddingVertical: 14,
-    borderRadius: 12,
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "#fff",
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  error: {
-    color: "red",
-    textAlign: "center",
-    marginBottom: 10,
-  },
-});
