@@ -1,4 +1,6 @@
+<p align="center">
   <img src="assets/images/Group 1171274914.png" width="400" />
+</p>
   
 # 🐠 FirmaTech — Smart Aquaculture Management App
 
