@@ -50,7 +50,6 @@ This project was built in just **3 days** during the **Junction Hackathon**, org
 ├── utils/                # Utility functions
 ├── .vscode/              # VS Code configs
 ├── app.json              # Expo configuration
-├── eas.json              # EAS build config
 └── package.json          # Project metadata
 ```
 
