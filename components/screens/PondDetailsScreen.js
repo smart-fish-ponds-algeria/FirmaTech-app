@@ -63,8 +63,16 @@ const PondDetailsScreen = () => {
       </Modal>
 
       {/* Dynamic Content */}
-      <ScrollView className='mx-2' contentContainerStyle={styles.scrollView}>
-        {activeTab === 'real-time' && <RealTimeTab />}
+      <ScrollView
+  style={{ flex: 1 }}
+  contentContainerStyle={{
+    paddingHorizontal: 16,
+    paddingBottom: 24,
+    width: '100%',
+    maxWidth: 800,
+    alignSelf: 'center',
+  }}
+>        {activeTab === 'real-time' && <RealTimeTab />}
         {activeTab === 'environmental' && <EnvironmentalTab />}
         {activeTab === 'ai-health' && <AIHealthTab />}
         {activeTab === 'feeding' && <FeedingTab />}

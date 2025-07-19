@@ -28,7 +28,7 @@ export default function LoginScreen() {
     <View className="flex-1 bg-white items-center pt-20 px-6">
       <Image
         source={require('../assets/images/group1171274913 (2).jpg')}
-        style={{ width: 64, height: 64, marginBottom: 80 }}
+        style={{ width: 250, height: 50, marginBottom: 80 }}
       />
       <Text className="text-[40px] font-extrabold text-[#0052FF] leading-[48px] text-left w-full max-w-xs">
         Let’s{'\n'}Get Started!

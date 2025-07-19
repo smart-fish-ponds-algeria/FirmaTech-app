@@ -34,20 +34,24 @@ export default function Layout() {
           },
           tabBarIcon: ({ color, size }) => {
             let iconName;
+
             if (route.name === 'index') iconName = 'home-outline';
+            else if (route.name === 'ponds') iconName = 'fish-outline'; // ✅ Added icon for ponds
             else if (route.name === 'notification') iconName = 'notifications-outline';
             else if (route.name === 'profile') iconName = 'person-outline';
+
             return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}
       >
         <Tabs.Screen name="index" options={{ title: 'Home' }} />
+        <Tabs.Screen name="ponds" options={{ title: 'Ponds' }} />
         <Tabs.Screen name="notification" options={{ title: 'Notifications' }} />
         <Tabs.Screen name="profile" options={{ title: 'Profile' }} />
         <Tabs.Screen
           name="pond/[id]"
           options={{
-            href: null, // ✅ hidden from tabs
+            href: null, // hidden from tabs
           }}
         />
       </Tabs>
