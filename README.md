@@ -11,7 +11,6 @@ Includes user authentication, reusable UI components, and Firebase push notifica
 - 💅 Custom UI components and improved UX
 - ⚛️ React Native with TypeScript
 - 🔔 Push Notifications via Firebase
-- 🌐 EAS Build support
 - 🧪 ESLint for consistent code quality
 
 ---
@@ -88,6 +87,9 @@ npm run build        # Build for production
   <img src="https://github.com/user-attachments/assets/58a0dc14-e76f-4bdc-94a6-fef7716c5583" width="300" />
   <img src="https://github.com/user-attachments/assets/65b03a3b-9761-45aa-862b-4f401ccd4fff" width="300" />
   <img src="https://github.com/user-attachments/assets/a155c05b-29db-4fbf-847c-ab9a850abe81" width="300" />
+  <img width="389" height="843" alt="image" src="https://github.com/user-attachments/assets/b865fe72-c9d5-4ad5-8fdd-081e40ee08d6" />
+<img width="389" height="843" alt="image" src="https://github.com/user-attachments/assets/78c81e45-135c-41f3-b479-f3b54de429f5" />
+
 </div>
 
 
