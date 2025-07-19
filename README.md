@@ -39,8 +39,8 @@ Includes user authentication, reusable UI components, and Firebase push notifica
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/smart-fish-ponds-algeria/FirmaTech-app.git
+cd FirmaTech-app
 ```
 
 ### 2. Install dependencies
