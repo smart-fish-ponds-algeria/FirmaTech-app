@@ -1,5 +1,5 @@
-  <img src="group1171274913 (2).jpg" width="300" />
-
+  <img src="/assets/group1171274913 (2).jpg" width="300" />
+  
 # 🐠 FirmaTech — Smart Aquaculture Management App
 
 ### 🚀 Built at Junction Hackathon (Club CELEC) — 3-Day Challenge
