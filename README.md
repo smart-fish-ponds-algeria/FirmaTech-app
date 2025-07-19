@@ -58,15 +58,13 @@ This project was built in just **3 days** during the **Junction Hackathon**, org
 
 ## 📱 Demo Screenshots
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/58a0dc14-e76f-4bdc-94a6-fef7716c5583" width="300" />
-  <img src="https://github.com/user-attachments/assets/65b03a3b-9761-45aa-862b-4f401ccd4fff" width="300" />
-  <img src="https://github.com/user-attachments/assets/a155c05b-29db-4fbf-847c-ab9a850abe81" width="300" />
-</div>
+| 📊 Dashboard                                                                                   | 🐟 AI Fish Health                                                                              | 🍽️ Feeding Management                                                                         | 🔔 Notifications                                                                                 |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| ![Dashboard](https://github.com/user-attachments/assets/58a0dc14-e76f-4bdc-94a6-fef7716c5583) | ![AI Health](https://github.com/user-attachments/assets/65b03a3b-9761-45aa-862b-4f401ccd4fff) | ![Feeding](https://github.com/user-attachments/assets/a155c05b-29db-4fbf-847c-ab9a850abe81) | <img width="200" alt="Notif1" src="https://github.com/user-attachments/assets/75091bb8-77a3-4295-98f0-b16cb5210b7a" /> <br> <img width="200" alt="Notif2" src="https://github.com/user-attachments/assets/416e6823-913f-46a2-8ffa-7dd6c0750a76" /> |
 
-| 📊 Dashboard                                                                                  | 🐟 AI Fish Health                                                                             | 🍽️ Feeding Management                                                                      |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| ![Dashboard](https://github.com/user-attachments/assets/58a0dc14-e76f-4bdc-94a6-fef7716c5583) | ![AI Health](https://github.com/user-attachments/assets/65b03a3b-9761-45aa-862b-4f401ccd4fff) | ![Feeding](https://github.com/user-attachments/assets/a155c05b-29db-4fbf-847c-ab9a850abe81) |
+
+
+
 
 ---
 
